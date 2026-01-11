@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Facebook, Youtube, Music2 } from "lucide-react";
 import { contactInfo } from "@/data/amulets";
 
@@ -9,8 +10,14 @@ export default function Footer() {
                     {/* Logo & Brand */}
                     <div className="text-center md:text-left">
                         <div className="flex items-center gap-3 justify-center md:justify-start mb-4">
-                            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] flex items-center justify-center text-black font-bold text-xl md:text-2xl shadow-lg">
-                                ท4
+                            <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#D4AF37] to-[#B8860B] flex items-center justify-center shadow-lg overflow-hidden border border-[#D4AF37]">
+                                <Image 
+                                    src="/favicon-16x16.jpg" 
+                                    alt="Logo" 
+                                    width={40} 
+                                    height={40} 
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
                             <div>
                                 <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37]">โต๊ดพระราม4</h3>
