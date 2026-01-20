@@ -38,6 +38,27 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                         <div className="premium-card rounded-2xl p-6 md:p-8 relative overflow-hidden group">
                            <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-[#D4AF37]/20 rounded-tl-3xl pointer-events-none transition-all group-hover:w-full group-hover:h-full group-hover:border-[#D4AF37]/10" />
                             
+                            {/* Faith Image - Highlight */}
+                            <div className="relative w-full aspect-[3/4] sm:aspect-[4/5] mb-8 rounded-xl overflow-hidden border border-[#D4AF37]/30 shadow-lg group-image">
+                                <Image
+                                    src="/tode-respect.jpg"
+                                    alt="โต๊ดพระราม4 กราบขอพรหลวงพ่อพัฒน์"
+                                    fill
+                                    className="object-cover hover:scale-105 transition-transform duration-700"
+                                />
+                                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 to-transparent" />
+                                <div className="absolute bottom-0 left-0 w-full p-4">
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <div className="w-1 h-4 bg-[#D4AF37] rounded-full" />
+                                        <span className="text-[#D4AF37] text-xs uppercase tracking-wider font-bold">ความศรัทธา</span>
+                                    </div>
+                                    <p className="text-white text-sm font-light leading-relaxed">
+                                        &quot;พุทธคุณจะคุ้มครองผู้ประพฤติดี&quot; <br/>
+                                        <span className="text-white/60 text-xs">ภาพเมื่อครั้งเข้ากราบถวายสักการะหลวงพ่อพัฒน์ ปุญฺญกาโม</span>
+                                    </p>
+                                </div>
+                            </div>
+
                             <p className="text-gray-300 text-base md:text-lg leading-relaxed mb-8 font-light tracking-wide text-justify">
                                 <strong className="text-gold-gradient font-bold text-xl">โต๊ดพระราม4</strong> คือเซียนพระเครื่องที่มีชื่อเสียงในวงการพระเครื่อง 
                                 โดยเฉพาะ <strong className="text-white border-b border-[#D4AF37]/30 pb-0.5">สายหลวงพ่อพัฒน์ วัดห้วยด้วน</strong> 
@@ -50,7 +71,7 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                                 {[
                                     { text: "พระแท้ 100%", icon: CheckCircle, color: "text-green-500" },
                                     { text: "ปลอดภัย ไว้ใจได้", icon: Shield, color: "text-blue-500" },
-                                    { text: "ประสบการณ์ 20+ ปี", icon: Award, color: "text-[#D4AF37]" },
+                                    { text: "ประสบการณ์ 5+ ปี", icon: Award, color: "text-[#D4AF37]" },
                                     { text: "จดทะเบียนถูกต้อง", icon: FileText, color: "text-purple-500" }
                                 ].map((badge, i) => (
                                     <div key={i} className="flex items-center gap-3 bg-[#0D0D0D]/40 p-3 rounded-lg border border-[#D4AF37]/10 hover:border-[#D4AF37]/30 transition-all">
@@ -97,9 +118,9 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                         {/* Stats - Grid Layout */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             {[
-                                { val: "20+", label: "ปีประสบการณ์" },
-                                { val: "10K+", label: "พระที่รับเช่า" },
-                                { val: "5K+", label: "ลูกค้าไว้ใจ" }
+                                { val: "5+", label: "ปีประสบการณ์" },
+                                { val: "2.5K+", label: "พระที่รับเช่า" },
+                                { val: "300+", label: "ลูกค้าไว้ใจ" }
                             ].map((stat, i) => (
                                 <div key={i} className="premium-card rounded-2xl p-6 text-center border border-[#D4AF37]/20 bg-gradient-to-b from-[#1A1A1A] to-[#0D0D0D] hover:-translate-y-2 transition-transform duration-300">
                                     <div className="text-3xl md:text-4xl font-bold text-gold-gradient mb-2 drop-shadow-md">{stat.val}</div>
