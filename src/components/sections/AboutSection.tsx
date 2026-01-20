@@ -120,7 +120,7 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                             {[
                                 { val: "5+", label: "ปีประสบการณ์" },
                                 { val: "2.5K+", label: "พระที่รับเช่า" },
-                                { val: "300+", label: "ลูกค้าไว้ใจ" }
+                                { val: "1000+", label: "ลูกค้าไว้ใจ" }
                             ].map((stat, i) => (
                                 <div key={i} className="premium-card rounded-2xl p-6 text-center border border-[#D4AF37]/20 bg-gradient-to-b from-[#1A1A1A] to-[#0D0D0D] hover:-translate-y-2 transition-transform duration-300">
                                     <div className="text-3xl md:text-4xl font-bold text-gold-gradient mb-2 drop-shadow-md">{stat.val}</div>

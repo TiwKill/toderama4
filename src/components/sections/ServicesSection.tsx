@@ -26,7 +26,7 @@ export default function ServicesSection() {
             buttonVariant: "gold" as const,
         },
         {
-            image: "/services/open-for-auction..png",
+            image: "/services/open-for-auction.png",
             badge: "ประมูลสด",
             badgeColor: "bg-gradient-to-r from-[#8B0000] to-[#D4AF37]",
             title: "เปิดประมูลพระเครื่อง",
@@ -60,12 +60,13 @@ export default function ServicesSection() {
                             className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-6 md:gap-8 premium-card rounded-2xl p-4 md:p-6`}
                         >
                             {/* Image */}
-                            <div className="flex-1 w-full aspect-video rounded-xl relative overflow-hidden border border-[#D4AF37]/20">
+                            <div className="flex-1 w-full relative overflow-hidden rounded-xl border border-[#D4AF37]/20 group-hover:border-[#D4AF37]/50 transition-colors">
                                 <Image
                                     src={service.image}
                                     alt={service.title}
-                                    fill
-                                    className="object-cover"
+                                    width={800}
+                                    height={600}
+                                    className="w-full h-auto object-contain"
                                 />
                             </div>
 
