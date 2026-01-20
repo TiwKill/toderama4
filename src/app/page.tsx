@@ -5,7 +5,9 @@ import {
     Header,
     Footer,
     HeroSection,
+    WelcomeSection,
     AmuletGallery,
+    ArticleSection,
     AboutSection,
     LPPhatBiography,
     ServicesSection,
@@ -29,8 +31,14 @@ export default function Home() {
                 {/* Hero Section */}
                 <HeroSection />
 
-                {/* 15 Buddha Amulet Gallery (with show more/less on mobile) */}
+                {/* Welcome / Intro Section */}
+                <WelcomeSection />
+
+                {/* 16 Buddha Amulet Gallery (with show more/less on mobile) */}
                 <AmuletGallery onAmuletClick={setSelectedAmulet} />
+
+                {/* บทความ พัฒน์ประเทืองทรัพย์ */}
+                <ArticleSection />
 
                 {/* About Toderama4 */}
                 <AboutSection onPDFClick={() => setIsPDFOpen(true)} />

@@ -20,25 +20,25 @@ export default function SocialSection() {
                             href={contactInfo.facebook}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-600 transition-all"
+                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:border-[#D4AF37] transition-all"
                         >
-                            <Facebook size={20} className="md:w-6 md:h-6" />
+                            <Facebook size={20} className="md:w-6 md:h-6 text-[#D4AF37]" />
                         </a>
                         <a
                             href={contactInfo.youtube}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:bg-red-600 hover:border-red-600 transition-all"
+                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:border-[#D4AF37] transition-all"
                         >
-                            <Youtube size={20} className="md:w-6 md:h-6" />
+                            <Youtube size={20} className="md:w-6 md:h-6 text-[#D4AF37]" />
                         </a>
                         <a
                             href={contactInfo.tiktok}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:bg-pink-600 hover:border-pink-600 transition-all"
+                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:border-[#D4AF37] transition-all"
                         >
-                            <Music2 size={20} className="md:w-6 md:h-6" />
+                            <Music2 size={20} className="md:w-6 md:h-6 text-[#D4AF37]" />
                         </a>
                     </div>
                 </div>

@@ -36,7 +36,7 @@ export default function AmuletGallery({ onAmuletClick }: AmuletGalleryProps) {
                         คำถามยอดฮิต
                     </div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
-                        15 รุ่นพระ<span className="text-[#D4AF37]">หลวงพ่อพัฒน์</span>ที่รับ
+                        16 รุ่นพระ<span className="text-[#D4AF37]">หลวงพ่อพัฒน์</span>ที่รับ
                     </h2>
                     <p className="text-gray-400 text-sm md:text-base">
                         คลิกที่รูปเพื่อดูรายละเอียดและติดต่อสอบถาม
@@ -50,26 +50,29 @@ export default function AmuletGallery({ onAmuletClick }: AmuletGalleryProps) {
                         <div
                             key={amulet.id}
                             onClick={() => onAmuletClick(amulet)}
-                            className="group relative aspect-square bg-[#1A1A1A] rounded-xl overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37] cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-[#D4AF37]/20 hover:-translate-y-1"
+                            className="group relative bg-[#1A1A1A] rounded-xl overflow-hidden border border-[#D4AF37]/20 hover:border-[#D4AF37] cursor-pointer transition-all duration-300 hover:shadow-xl hover:shadow-[#D4AF37]/20 hover:-translate-y-1"
                         >
-                            <Image
-                                src={amulet.src}
-                                alt={amulet.name}
-                                fill
-                                sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
-                                className="object-cover group-hover:scale-110 transition-transform duration-500"
-                            />
-                            {/* Overlay with name */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="absolute bottom-0 left-0 right-0 p-3">
-                                    <p className="text-center text-[#D4AF37] text-sm font-bold">{amulet.name}</p>
+                            {/* Image Container */}
+                            <div className="relative aspect-square">
+                                <Image
+                                    src={amulet.src}
+                                    alt={amulet.name}
+                                    fill
+                                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                {/* Hover overlay with button */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                    <div className="bg-[#D4AF37] text-black px-3 py-1 rounded-full text-xs font-bold">
+                                        ดูรายละเอียด
+                                    </div>
                                 </div>
                             </div>
-                            {/* Click hint */}
-                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <div className="bg-[#D4AF37] text-black px-3 py-1 rounded-full text-xs font-bold">
-                                    ดูรายละเอียด
-                                </div>
+                            {/* Name Label - Always Visible */}
+                            <div className="p-2 md:p-3 bg-gradient-to-t from-[#0D0D0D] to-[#1A1A1A]">
+                                <p className="text-center text-[#D4AF37] text-xs md:text-sm font-bold leading-tight line-clamp-2">
+                                    {amulet.name}
+                                </p>
                             </div>
                         </div>
                     ))}
