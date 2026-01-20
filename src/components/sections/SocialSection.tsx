@@ -15,32 +15,41 @@ export default function SocialSection() {
                         อยากได้พระแท้...<br />
                         <span className="text-[#D4AF37]">ติดตามเราได้ที่</span>
                     </h2>
-                    <div className="flex gap-3 md:gap-4 justify-center md:justify-start">
-                        <a
-                            href={contactInfo.facebook}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:border-[#D4AF37] transition-all"
-                        >
-                            <Facebook size={20} className="md:w-6 md:h-6 text-[#D4AF37]" />
-                        </a>
-                        <a
-                            href={contactInfo.youtube}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:border-[#D4AF37] transition-all"
-                        >
-                            <Youtube size={20} className="md:w-6 md:h-6 text-[#D4AF37]" />
-                        </a>
-                        <a
-                            href={contactInfo.tiktok}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="w-12 h-12 md:w-14 md:h-14 bg-[#1A1A1A] border border-[#D4AF37]/30 rounded-full flex items-center justify-center hover:border-[#D4AF37] transition-all"
-                        >
-                            <Music2 size={20} className="md:w-6 md:h-6 text-[#D4AF37]" />
-                        </a>
+                    <div className="flex justify-center md:justify-start gap-3 md:gap-4">
+                        {[
+                            { href: contactInfo.facebook, Icon: Facebook },
+                            { href: contactInfo.youtube, Icon: Youtube },
+                            { href: contactInfo.tiktok, Icon: Music2 },
+                        ].map(({ href, Icon }, i) => (
+                            <a
+                                key={i}
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="
+                                    group
+                                    flex items-center justify-center
+                                    size-12 md:size-14
+                                    rounded-full
+                                    bg-neutral-900
+                                    border border-[#D4AF37]/30
+                                    transition-all duration-300
+                                    hover:bg-[#D4AF37]
+                                    hover:border-[#D4AF37]
+                                "
+                            >
+                                <Icon
+                                    className="
+                                    size-5 md:size-6
+                                    text-[#D4AF37]
+                                    transition-colors
+                                    group-hover:text-black
+                                    "
+                                />
+                            </a>
+                        ))}
                     </div>
+
                 </div>
 
                 {/* Facebook Reel Embed */}

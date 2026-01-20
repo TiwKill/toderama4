@@ -43,11 +43,11 @@ export default function Footer() {
                                 <Facebook size={18} />
                             </a>
                             <a href={contactInfo.youtube} target="_blank" rel="noopener noreferrer"
-                                className="w-10 h-10 bg-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-red-600 transition-all">
+                                className="w-10 h-10 bg-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all">
                                 <Youtube size={18} />
                             </a>
                             <a href={contactInfo.tiktok} target="_blank" rel="noopener noreferrer"
-                                className="w-10 h-10 bg-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-pink-600 transition-all">
+                                className="w-10 h-10 bg-[#2D2D2D] rounded-full flex items-center justify-center hover:bg-[#D4AF37] hover:text-black transition-all">
                                 <Music2 size={18} />
                             </a>
                         </div>
