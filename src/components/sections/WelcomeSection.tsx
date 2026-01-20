@@ -5,64 +5,82 @@ import { contactInfo } from "@/data/amulets";
 
 export default function WelcomeSection() {
     return (
-        <section className="w-full bg-gradient-to-b from-[#0D0D0D] to-[#1A1A1A] py-12 md:py-20 px-4 relative overflow-hidden">
+        <section className="w-full bg-[#0D0D0D] py-12 md:py-20 px-4 relative overflow-hidden">
+            {/* Sacred Background Pattern */}
+            <div className="absolute inset-0 sacred-pattern opacity-40 pointer-events-none" />
+            
             {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent" />
-            <div className="absolute -left-20 top-1/2 w-40 h-40 bg-[#D4AF37]/5 rounded-full blur-3xl" />
-            <div className="absolute -right-20 top-1/3 w-60 h-60 bg-[#8B0000]/5 rounded-full blur-3xl" />
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#D4AF37]/50 to-transparent" />
+            <div className="absolute -left-20 top-1/2 w-40 h-40 bg-[#D4AF37]/10 rounded-full blur-[100px]" />
+            <div className="absolute -right-20 top-1/3 w-60 h-60 bg-[#8B0000]/10 rounded-full blur-[100px]" />
 
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto relative z-10">
                 {/* Section Header */}
-                <div className="text-center mb-8 md:mb-12">
-                    <div className="inline-block px-4 py-1 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-full text-[#D4AF37] text-xs md:text-sm tracking-wider uppercase mb-3">
+                <div className="text-center mb-10 md:mb-16">
+                    <div className="inline-block px-4 py-1 border border-[#D4AF37]/30 bg-[#0D0D0D]/60 backdrop-blur-md rounded-full text-[#D4AF37] text-xs md:text-sm tracking-[0.2em] uppercase mb-4 shadow-[0_0_15px_rgba(212,175,55,0.1)]">
                         ยินดีต้อนรับ
                     </div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">
-                        <span className="text-[#D4AF37]">โต๊ดพระราม4</span> – ยินดีต้อนรับ
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-xl">
+                        <span className="text-gold-gradient relative inline-block">
+                            โต๊ดพระราม4
+                            {/* Glow effect */}
+                            <div className="absolute inset-0 blur-xl bg-[#D4AF37]/20 -z-10 rounded-full"></div>
+                        </span> – ยินดีต้อนรับ
                     </h2>
-                    <div className="w-20 md:w-24 h-1 bg-gradient-to-r from-[#D4AF37] to-[#B8860B] mx-auto rounded-full" />
+                    <div className="w-24 md:w-32 h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mx-auto rounded-full mt-6 opacity-70" />
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Welcome Image */}
-                    <div className="relative group">
-                        <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/20 via-[#8B0000]/20 to-[#D4AF37]/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-                        <div className="relative rounded-2xl overflow-hidden border-2 border-[#D4AF37]/30 shadow-2xl shadow-[#D4AF37]/10">
+                    <div className="relative group perspective-1000">
+                        <div className="absolute -inset-4 bg-gradient-to-r from-[#D4AF37]/20 via-[#8B0000]/20 to-[#D4AF37]/20 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500 animate-pulse-slow" />
+                        <div className="premium-card relative rounded-2xl overflow-hidden shadow-2xl transform transition-transform duration-500 group-hover:rotate-y-2">
                             <Image
                                 src="/welcome.jpg"
                                 alt="โต๊ดพระราม4 - ยินดีต้อนรับ"
                                 width={600}
                                 height={400}
-                                className="w-full h-auto object-cover"
+                                className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                                 priority
                             />
                             {/* Overlay gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D]/60 via-transparent to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-80" />
+                            
+                            {/* Corner Accents */}
+                            <div className="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-[#D4AF37]/50 rounded-tl-lg" />
+                            <div className="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-[#D4AF37]/50 rounded-br-lg" />
                         </div>
                     </div>
 
                     {/* Welcome Text */}
                     <div className="space-y-6">
                         {/* Introduction Card */}
-                        <div className="premium-card rounded-2xl p-5 md:p-6 border border-[#D4AF37]/20 bg-[#1A1A1A]/80 backdrop-blur-sm">
-                            <h3 className="text-lg md:text-xl font-bold text-[#D4AF37] mb-4">วัตถุประสงค์</h3>
-                            <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                                วัตถุประสงค์ของเว็บไซต์นี้เพื่อ<strong className="text-[#D4AF37]">เผยแพร่บารมีหลวงปู่พัฒน์</strong>
-                                ให้ผู้มีศรัทธาได้ศึกษาประวัติและพระเครื่องแต่ละรุ่น
-                                พระที่นำมาแสดงเป็น<strong className="text-white">พระแท้ตามหลักสากลนิยม</strong>
+                        <div className="premium-card rounded-2xl p-6 md:p-8 border border-[#D4AF37]/20 bg-[#1A1A1A]/90 backdrop-blur-md relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-[#D4AF37]/10 to-transparent rounded-bl-full pointer-events-none" />
+                            
+                            <h3 className="text-xl md:text-2xl font-bold text-[#D4AF37] mb-4 flex items-center gap-3">
+                                <span className="w-1 h-8 bg-[#D4AF37] rounded-full"></span>
+                                วัตถุประสงค์
+                            </h3>
+                            <p className="text-gray-300 text-sm md:text-base leading-relaxed font-light tracking-wide">
+                                วัตถุประสงค์ของเว็บไซต์นี้เพื่อ <strong className="text-gold-gradient font-medium">เผยแพร่บารมีหลวงปู่พัฒน์</strong> ให้ผู้มีศรัทธาได้ศึกษาประวัติและพระเครื่องแต่ละรุ่น พระที่นำมาแสดงเป็น <strong className="text-white border-b border-[#D4AF37]/30 pb-0.5">พระแท้ตามหลักสากลนิยม</strong>
                             </p>
                         </div>
 
                         {/* About Me Card */}
-                        <div className="premium-card rounded-2xl p-5 md:p-6 border border-[#8B0000]/30 bg-[#1A1A1A]/80 backdrop-blur-sm">
-                            <h3 className="text-lg md:text-xl font-bold text-white mb-4">ผม โต๊ดพระราม4</h3>
-                            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-4">
-                                ยินดีให้ข้อมูลพระเครื่องสาย<strong className="text-[#D4AF37]">หลวงปู่พัฒน์ วัดห้วยด้วน</strong>
-                                ทุกรุ่น ทุกพิมพ์ ทั้งพระเครื่องและพระบูชา
+                        <div className="premium-card rounded-2xl p-6 md:p-8 border border-[#8B0000]/30 bg-gradient-to-br from-[#1A1A1A] to-[#0D0D0D] backdrop-blur-md relative overflow-hidden">
+                            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 flex items-center gap-3">
+                                <span className="w-1 h-8 bg-white rounded-full"></span>
+                                ผม โต๊ดพระราม4
+                            </h3>
+                            <p className="text-gray-300 text-sm md:text-base leading-relaxed mb-6 font-light tracking-wide">
+                                ยินดีให้ข้อมูลพระเครื่องสาย <strong className="text-gold-gradient font-medium">หลวงปู่พัฒน์ วัดห้วยด้วน</strong> ทุกรุ่น ทุกพิมพ์ ทั้งพระเครื่องและพระบูชา
                             </p>
-                            <div className="bg-[#D4AF37]/10 rounded-xl p-4 border border-[#D4AF37]/20">
-                                <p className="text-[#D4AF37] text-sm md:text-base font-medium text-center">
-                                    พร้อมบริการ<strong className="text-white"> รับเช่า – ให้เช่า – จัดหา</strong>พระเครื่องหลวงปู่พัฒน์
+                            
+                            <div className="bg-[#D4AF37]/5 rounded-xl p-4 border border-[#D4AF37]/20 text-center relative overflow-hidden">
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#D4AF37]/5 to-transparent animate-shimmer" />
+                                <p className="text-[#D4AF37] text-sm md:text-base font-medium relative z-10">
+                                    พร้อมบริการ <strong className="text-white text-lg mx-1">รับเช่า – ให้เช่า – จัดหา</strong> พระเครื่องหลวงปู่พัฒน์
                                 </p>
                             </div>
                         </div>
@@ -72,10 +90,11 @@ export default function WelcomeSection() {
                             href={contactInfo.lineUrl} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center gap-3 w-full px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-[#00B900] to-[#00A000] text-white font-bold rounded-xl shadow-lg hover:shadow-xl hover:shadow-green-500/20 transition-all hover:-translate-y-0.5"
+                            className="group relative flex items-center justify-center gap-3 w-full px-6 md:px-8 py-4 bg-gradient-to-r from-[#00B900] to-[#008000] text-white font-bold rounded-xl shadow-[0_0_20px_rgba(0,185,0,0.3)] hover:shadow-[0_0_30px_rgba(0,185,0,0.5)] transition-all transform hover:-translate-y-1 overflow-hidden"
                         >
-                            <Phone className="w-5 h-5" />
-                            ติดต่อสอบถามผ่าน LINE
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
+                            <Phone className="w-6 h-6 animate-bounce-slow" />
+                            <span className="tracking-wide text-lg">ติดต่อสอบถามผ่าน LINE</span>
                         </a>
                     </div>
                 </div>

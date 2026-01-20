@@ -20,7 +20,7 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-transparent to-[#0D0D0D]/90" />
                 
                 {/* Mobile content overlay */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 mt-3">
                     <div className="mb-3">
                          <div className="inline-block px-4 py-1 border border-[#D4AF37]/30 bg-[#0D0D0D]/40 backdrop-blur-sm rounded-full">
                             <span className="text-[#D4AF37] text-xs tracking-[0.2em] uppercase font-medium">ผู้เชี่ยวชาญสายหลวงพ่อพัฒน์</span>
