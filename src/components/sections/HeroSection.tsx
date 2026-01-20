@@ -9,20 +9,49 @@ export default function HeroSection() {
 
             {/* Mobile/Tablet View (< md) */}
             <div className="block md:hidden relative w-full">
-                <div className="relative w-full aspect-[4/3] sm:aspect-video">
+                <div className="relative w-full">
                     <Image
                         src="/banner.jpg"
                         alt="โต๊ดพระราม4 Banner"
-                        fill
-                        className="object-contain object-top"
+                        width={1200}
+                        height={675}
+                        className="w-full h-auto block"
                         priority
                     />
                     {/* Gradient Overlay for seamless transition */}
-                    <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#050505] to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#050505] to-transparent" />
                 </div>
                 
-                {/* Content hidden on mobile as requested */}
-                <div className="hidden"></div>
+                {/* Infinite Marquee Slider - Mobile Only */}
+                <div className="relative w-full overflow-hidden bg-gradient-to-b from-[#050505] to-[#0D0D0D] py-4">
+                    <div className="absolute top-0 left-0 w-8 h-full bg-gradient-to-r from-[#050505] to-transparent z-10" />
+                    <div className="absolute top-0 right-0 w-8 h-full bg-gradient-to-l from-[#050505] to-transparent z-10" />
+                    
+                    <div className="flex w-max animate-marquee">
+                        {/* Duplicate the image set for seamless looping */}
+                        {[...Array(2)].map((_, setIndex) => (
+                            <div key={setIndex} className="flex gap-3 px-1.5">
+                                {[
+                                    "S__33456157_0.jpg", "S__33456158_0.jpg", "S__33456159_0.jpg", "S__33456160_0.jpg",
+                                    "S__33456161_0.jpg", "S__33456162_0.jpg", "S__33456163_0.jpg", "S__33456164_0.jpg",
+                                    "S__33456165_0.jpg", "S__33456166_0.jpg", "S__33456181_0.jpg", "S__33456182_0.jpg",
+                                    "S__33456183_0.jpg", "S__33456184_0.jpg", "S__33456185_0.jpg", "S__33456186_0.jpg"
+                                ].map((img, i) => (
+                                    <div key={`${setIndex}-${i}`} className="relative w-24 h-32 flex-shrink-0 rounded-lg overflow-hidden border border-[#D4AF37]/20 shadow-md">
+                                        <Image
+                                            src={`/buddha/${img}`}
+                                            alt={`พระเครื่อง ${i + 1}`}
+                                            fill
+                                            className="object-cover hover:scale-110 transition-transform duration-500"
+                                            sizes="96px"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60" />
+                                    </div>
+                                ))}
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
 
             {/* Desktop/Landscape View (>= md) */}
