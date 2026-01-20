@@ -163,30 +163,40 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                                 <span className="text-gold-gradient">ข้อมูลติดต่อ</span>
                             </h3>
                             
-                            <div className="space-y-5">
+                            <div className="space-y-6">
+                                {/* Phone Contact */}
                                 <div className="flex items-center gap-4 group">
-                                    <div className="w-10 h-10 rounded-lg bg-[#2D2D2D] flex items-center justify-center text-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-black transition-all duration-300">
-                                        📱
+                                    <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center border border-[#D4AF37]/20 group-hover:bg-[#D4AF37] transition-all duration-300 shadow-md group-hover:shadow-[0_0_15px_rgba(212,175,55,0.4)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[#D4AF37] group-hover:text-black transition-colors">
+                                            <path d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" />
+                                            <path fillRule="evenodd" d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125c0-.621.504-1.125 1.125-1.125h6.75c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z" clipRule="evenodd" />
+                                        </svg>
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-0.5">เบอร์โทรศัพท์</p>
-                                        <p className="text-white font-bold text-lg">{contactInfo.phone}</p>
+                                        <a href={`tel:${contactInfo.phone.replace(/-/g, '')}`} className="text-white font-bold text-lg hover:text-[#D4AF37] transition-colors font-mono">{contactInfo.phone}</a>
                                     </div>
                                 </div>
                                 
+                                {/* LINE Contact */}
                                 <div className="flex items-center gap-4 group">
-                                    <div className="w-10 h-10 rounded-lg bg-[#2D2D2D] flex items-center justify-center text-[#00B900] group-hover:bg-[#00B900] group-hover:text-white transition-all duration-300">
-                                        💬
+                                    <div className="w-12 h-12 rounded-xl bg-[#06C755]/10 flex items-center justify-center border border-[#06C755]/20 group-hover:bg-[#06C755] transition-all duration-300 shadow-md group-hover:shadow-[0_0_15px_rgba(6,199,85,0.4)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 text-[#06C755] group-hover:text-white transition-colors">
+                                            <path d="M21.502 9.774c0-4.04-4.256-7.391-9.5-7.391-5.245 0-9.5 3.352-9.5 7.391 0 3.655 3.238 6.804 8.125 7.304.316.07.747.215.856.492.097.246.063.633.031.883-.07.562-.437 2.18-.5 2.503-.027.13-.01.353.136.435.145.08.41.026.582-.12a20.046 20.046 0 005.419-4.832c3.086-2.072 4.351-4.484 4.351-6.666z" />
+                                        </svg>
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-0.5">Line ID</p>
-                                        <p className="text-white font-bold text-lg">{contactInfo.lineId}</p>
+                                        <a href={contactInfo.lineUrl} target="_blank" rel="noopener noreferrer" className="text-white font-bold text-lg hover:text-[#06C755] transition-colors font-mono">{contactInfo.lineId}</a>
                                     </div>
                                 </div>
                                 
+                                {/* Location Contact */}
                                 <div className="flex items-center gap-4 group">
-                                    <div className="w-10 h-10 rounded-lg bg-[#2D2D2D] flex items-center justify-center text-red-500 group-hover:bg-red-500 group-hover:text-white transition-all duration-300">
-                                        📍
+                                    <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center border border-red-500/20 group-hover:bg-red-500 transition-all duration-300 shadow-md group-hover:shadow-[0_0_15px_rgba(239,68,68,0.4)]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-red-500 group-hover:text-white transition-colors">
+                                            <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
+                                        </svg>
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-0.5">ที่ตั้ง</p>
@@ -194,13 +204,16 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                                     </div>
                                 </div>
 
+                                {/* TikTok Contact */}
                                 <div className="flex items-center gap-4 group">
-                                     <div className="w-10 h-10 rounded-lg bg-[#2D2D2D] flex items-center justify-center text-white group-hover:bg-black group-hover:text-white transition-all duration-300 border border-white/10">
-                                        🎵
+                                     <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-black group-hover:border-white/30 transition-all duration-300 shadow-md">
+                                        <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-white">
+                                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                                        </svg>
                                     </div>
                                     <div>
                                         <p className="text-xs text-gray-500 uppercase tracking-wider mb-0.5">TikTok</p>
-                                        <p className="text-white font-medium">@tode_rama4</p>
+                                        <a href="https://www.tiktok.com/@tode_rama4" target="_blank" rel="noopener noreferrer" className="text-white font-medium hover:text-[#D4AF37] transition-colors">@tode_rama4</a>
                                     </div>
                                 </div>
                             </div>
