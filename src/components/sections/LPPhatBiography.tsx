@@ -22,7 +22,7 @@ export default function LPPhatBiography() {
                         {/* Buddha Image */}
                         <div className="md:w-1/3 aspect-square md:aspect-auto relative min-h-[250px] md:min-h-0">
                             <Image
-                                src="/buddha/S__33456157_0.jpg"
+                                src="/buddha.jpg"
                                 alt="หลวงพ่อพัฒน์ ปุญญกาโม"
                                 fill
                                 className="object-cover"

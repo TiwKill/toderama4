@@ -5,7 +5,7 @@ export default function HeroSection() {
     return (
         <section className="w-full relative overflow-hidden">
             {/* Mobile: Full width banner without crop */}
-            <div className="block md:hidden relative w-full">
+            <div className="block md:hidden relative w-full bg-[#0D0D0D]">
                 <Image
                     src="/banner.jpg"
                     alt="โต๊ดพระราม4 Banner"
@@ -14,8 +14,10 @@ export default function HeroSection() {
                     className="w-full h-auto object-contain"
                     priority
                 />
-                {/* Overlay gradient for mobile */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/60 via-transparent to-[#0D0D0D]/80" />
+                {/* Dark overlay for mobile - make it darker over the whole image */}
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-transparent to-[#0D0D0D]/90" />
                 
                 {/* Mobile content overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
@@ -49,7 +51,9 @@ export default function HeroSection() {
             <div className="hidden md:block relative h-[600px] lg:h-[700px]">
                 {/* Background with overlay */}
                 <div className="absolute inset-0 bg-[url('/banner.jpg')] bg-cover bg-center" />
-                <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/70 via-[#0D0D0D]/50 to-[#0D0D0D]" />
+                {/* Dark overlay for desktop to ensure text readability */}
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/70 via-[#0D0D0D]/40 to-[#0D0D0D]" />
 
                 {/* Decorative gold lines */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
