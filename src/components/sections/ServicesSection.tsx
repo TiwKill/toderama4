@@ -26,7 +26,7 @@ export default function ServicesSection() {
             buttonVariant: "gold" as const,
         },
         {
-            image: "/services/open-for-auction.png",
+            image: "/services/open-for-auction.jpg",
             badge: "ประมูลสด",
             badgeColor: "bg-gradient-to-r from-[#8B0000] to-[#D4AF37]",
             title: "เปิดประมูลพระเครื่อง",
