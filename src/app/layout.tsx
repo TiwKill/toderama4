@@ -15,6 +15,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+    metadataBase: new URL('https://toderama4.vercel.app'),
     // Basic SEO
     title: {
         default: "โต๊ดพระราม4 พระเครื่อง | รับเช่าพระ ให้ราคาสูง จ่ายเงินสดทันที",
@@ -60,16 +61,18 @@ export const metadata: Metadata = {
         },
     },
 
-    // Verification (ใส่ค่าจริงเมื่อได้จาก Google Search Console)
-    // verification: {
-    //     google: 'your-google-verification-code',
-    // },
+    // Verification - สำคัญมากสำหรับการทำให้ Google เจอเว็บเร็วขึ้น
+    // นำโค้ดจาก Google Search Console มาใส่ที่นี่
+    verification: {
+        google: 'qGIPMpnmF1JOoZnXwvCWrEhB1SsTbJZczjqkHpkLxig',
+    },
 
     // Open Graph
     openGraph: {
         title: "โต๊ดพระราม4 พระเครื่อง | รับเช่าพระ ให้ราคาสูง จ่ายเงินสดทันที",
         description: "โต๊ดพระราม4 พระเครื่อง ผู้เชี่ยวชาญรับเช่าพระเครื่อง พระบูชา เครื่องราง ให้ราคาสูง จ่ายเงินสดทันที ประเมินราคาฟรี ประสบการณ์กว่า 20 ปี",
         type: "website",
+        url: 'https://toderama4.vercel.app',
         locale: "th_TH",
         siteName: "โต๊ดพระราม4 พระเครื่อง",
         images: [
@@ -123,7 +126,8 @@ export default function RootLayout({
 
                 {/* Favicon */}
                 <link rel="icon" href="/favicon.ico" sizes="any" />
-                <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+                <link rel="apple-touch-icon" href="/apple-touch-icon.jpg" />
+                <link rel="manifest" href="/manifest.json" />
 
                 {/* Additional SEO meta tags */}
                 <meta name="geo.region" content="TH-10" />
