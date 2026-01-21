@@ -15,7 +15,7 @@ export default function ServicesSection() {
             buttonVariant: "red" as const,
         },
         {
-            image: "/services/for-rent.png",
+            image: "/services/for-rent.jpg",
             badge: "พระแท้ 100%",
             badgeColor: "bg-[#D4AF37] text-black",
             title: "ให้เช่าพระเครื่อง",
