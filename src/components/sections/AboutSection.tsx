@@ -93,22 +93,26 @@ export default function AboutSection({ onPDFClick }: AboutSectionProps) {
                             {/* PDF Thumbnail Preview */}
                             <div 
                                 onClick={onPDFClick}
-                                className="relative cursor-pointer group w-full max-w-[240px]"
+                                className="relative cursor-pointer group w-full max-w-[300px] mx-auto lg:mx-0"
                             >
-                                <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-[#D4AF37]/20 group-hover:border-[#D4AF37] transition-all duration-500 shadow-2xl group-hover:shadow-[0_0_30px_rgba(212,175,55,0.2)] transform group-hover:scale-105 bg-white/5">
+                                <div className="aspect-[3/4] rounded-xl overflow-hidden border-2 border-[#D4AF37]/30 group-hover:border-[#D4AF37] transition-all duration-500 shadow-2xl group-hover:shadow-[0_0_40px_rgba(212,175,55,0.3)] transform group-hover:scale-105 bg-white">
                                     <iframe 
-                                        src={`${companyInfo.pdfPath}#page=1&view=FitH`}
-                                        className="w-full h-full pointer-events-none opacity-80 group-hover:opacity-100 transition-opacity"
+                                        src={`${companyInfo.pdfPath}#toolbar=0&navpanes=0&scrollbar=0&page=1&view=FitH`}
+                                        className="w-full h-full pointer-events-none transition-opacity"
                                         title="ใบจดทะเบียนบริษัท Preview"
                                     />
-                                    {/* Overlay */}
-                                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/30 transition-colors flex items-center justify-center backdrop-blur-[2px] group-hover:backdrop-blur-none">
-                                        <div className="bg-[#D4AF37] text-black px-6 py-2.5 rounded-full text-sm font-bold shadow-lg transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2">
-                                            <span>คลิกเพื่อดูเอกสาร</span>
+                                    {/* Overlay - subtle gradient at bottom for better visibility of document */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-40 group-hover:opacity-70 transition-opacity flex items-end justify-center pb-8">
+                                        <div className="bg-[#D4AF37] text-black px-6 py-2.5 rounded-full text-sm font-bold shadow-lg transform translate-y-2 group-hover:translate-y-0 opacity-100 transition-all duration-300 flex items-center gap-2">
+                                            <span>เปิดดูเอกสารฉบับเต็ม</span>
                                             <FileText size={16} />
                                         </div>
                                     </div>
                                 </div>
+                                {/* Floating Hint */}
+                                <p className="mt-4 text-[#D4AF37] text-xs font-bold uppercase tracking-[0.2em] animate-pulse">
+                                    คลิกเพื่อขยายดูใบจดทะเบียน
+                                </p>
                             </div>
                         </div>
                     </div>
