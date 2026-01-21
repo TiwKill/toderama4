@@ -4,7 +4,7 @@ import { contactInfo } from "@/data/amulets";
 export default function ServicesSection() {
     const services = [
         {
-            image: "/services/rent.png",
+            image: "/services/rent.jpg",
             badge: "บริการยอดนิยม",
             badgeColor: "bg-[#8B0000]",
             title: "รับเช่าพระเครื่อง",

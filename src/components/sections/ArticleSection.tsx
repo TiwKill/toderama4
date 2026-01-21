@@ -37,7 +37,7 @@ export default function ArticleSection() {
                     <div className="relative rounded-2xl overflow-hidden border border-[#D4AF37]/30 shadow-[0_0_50px_rgba(0,0,0,0.5)] max-w-md mx-auto transform transition-all duration-700 group-hover:rotate-x-2 group-hover:scale-105">
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-10" />
                         <Image
-                            src="/buddha/S__33456184_0.jpg"
+                            src="/about.jpg"
                             alt="พัฒน์ประเทืองทรัพย์"
                             width={500}
                             height={500}
