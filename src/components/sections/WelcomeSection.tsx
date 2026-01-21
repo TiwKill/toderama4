@@ -80,22 +80,10 @@ export default function WelcomeSection() {
                             <div className="bg-[#D4AF37]/5 rounded-xl p-4 border border-[#D4AF37]/20 text-center relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#D4AF37]/5 to-transparent animate-shimmer" />
                                 <p className="text-[#D4AF37] text-sm md:text-base font-medium relative z-10">
-                                    พร้อมบริการ <strong className="text-white text-lg mx-1">รับเช่า – ให้เช่า – จัดหา</strong> พระเครื่องหลวงปู่พัฒน์
+                                    พร้อมบริการ <strong className="text-white text-lg mx-1">รับเช่า – ให้เช่า – จำนำ</strong> พระเครื่องหลวงปู่พัฒน์
                                 </p>
                             </div>
                         </div>
-
-                        {/* Contact CTA */}
-                        <a 
-                            href={contactInfo.lineUrl} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="group relative flex items-center justify-center gap-3 w-full px-6 md:px-8 py-4 bg-gradient-to-r from-[#00B900] to-[#008000] text-white font-bold rounded-xl shadow-[0_0_20px_rgba(0,185,0,0.3)] hover:shadow-[0_0_30px_rgba(0,185,0,0.5)] transition-all transform hover:-translate-y-1 overflow-hidden"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:animate-shimmer" />
-                            <Phone className="w-6 h-6 animate-bounce-slow" />
-                            <span className="tracking-wide text-lg">ติดต่อสอบถามผ่าน LINE</span>
-                        </a>
                     </div>
                 </div>
             </div>

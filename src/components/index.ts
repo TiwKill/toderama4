@@ -12,6 +12,7 @@ export { default as LPPhatBiography } from './sections/LPPhatBiography';
 export { default as ServicesSection } from './sections/ServicesSection';
 export { default as YouTubeSection } from './sections/YouTubeSection';
 export { default as SocialSection } from './sections/SocialSection';
+export { default as PawnCTASection } from './sections/PawnCTASection';
 
 // Modal components
 export { default as AmuletModal } from './modals/AmuletModal';

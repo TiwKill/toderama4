@@ -15,6 +15,7 @@ import {
     SocialSection,
     AmuletModal,
     PDFModal,
+    PawnCTASection,
 } from "@/components";
 
 export default function Home() {
@@ -33,6 +34,9 @@ export default function Home() {
 
                 {/* Welcome / Intro Section */}
                 <WelcomeSection />
+
+                {/* Pawn CTA Section - Mobile Focused */}
+                <PawnCTASection />
 
                 {/* 16 Buddha Amulet Gallery (with show more/less on mobile) */}
                 <AmuletGallery onAmuletClick={setSelectedAmulet} />
