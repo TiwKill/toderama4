@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://toderama4.vercel.app/sitemap.xml
+Sitemap: https://โต๊ดพระราม4.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
